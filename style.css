@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem;
+    background-color: hsl(204, 43%, 93%);
+    min-height: 100vh;
+    font-family: 'Karla', sans-serif;
+}
+.container{
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 0.5rem;
+    overflow: hidden;
+    box-shadow: 3px 9px 37px -21px rgba(0,0,0,0.75);
+}
+
+ul{
+    text-decoration: none;
+}
+.box1{
+    padding:2rem 2rem 0;
+}
+.box1 > *{
+    margin-bottom: 1.5rem;
+}
+.box2{
+    padding: 2rem 2rem 0;
+    background-color: hsl(179, 62%, 43%);
+}
+.box2 > *{
+    margin-bottom: 1.5rem;
+}
+.box2 #btn{
+    width: 100%;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    border-style: none;
+    background-color: hsl(71, 73%, 54%);
+    box-shadow: 1px 9px 23px -8px rgba(0,0,0,0.75);
+}
+.box2 #btn:hover{
+    cursor: pointer;
+    background-color: hsla(71, 100%, 74%, 0.8);
+    transition: 0.2s ease-in-out;
+}
+.box3{
+    padding: 2rem;
+    background-color: hsla(179, 62%, 43%, 0.7);
+}
+.box3 .box3-title{
+    margin-bottom: 1.5rem;
+}
+.subscription{
+    display: flex;
+    align-items: center;
+}
+.subscription .price{
+    font-size: 2rem;
+    margin-right: 0.75rem;
+}
+.subscription .frequency{
+    color: hsla(204, 43%, 93%, 0.6)
+}
+/* font-design */
+.box1-title{
+    color: hsl(179, 62%, 43%);
+}
+.box1-subtitle{
+    color: hsl(71, 73%, 54%);
+}
+.box1-description{
+    color:hsl(218, 22%, 67%);
+    font-size: 0.75rem;
+    line-height: 1.5rem;
+}
+.box2{
+    color: white;
+}
+.box2 #btn{
+    color:white;
+    font-weight: 700;
+}
+.box3{
+    color: white;
+}
+.box3 ul{
+    color: hsl(204, 43%, 93%);
+    font-size: 0.75rem;
+    font-weight: 400;
+    margin: 0.5rem 0;
+}
+.frequency{
+    font-size: 0.9rem;
+}
+@media (min-width:576px){
+    .container{
+        display: grid;
+        max-width: 600px;
+        grid-template-columns: 50% 50%;
+        grid-template-areas: 
+        "top top"
+        "left right";
+    }
+    .box1{
+        grid-area: top;
+    }
+    .box2{
+        grid-area: left;
+    }
+    .box3{
+        grid-area: right;
+    }
+}
